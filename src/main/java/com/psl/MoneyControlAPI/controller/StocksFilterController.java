@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping
 @CrossOrigin()
-public class StocksController {
+public class StocksFilterController {
 
     @GetMapping("/")
     public String welcomeMsg(){
