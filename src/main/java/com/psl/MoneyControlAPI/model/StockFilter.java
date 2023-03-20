@@ -23,5 +23,4 @@ public class StockFilter {
     private double fiveYear;
     private double tenYear;
 
-
 }
