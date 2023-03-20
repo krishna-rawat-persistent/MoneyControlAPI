@@ -6,7 +6,7 @@ import org.jsoup.nodes.Element;
 import org.springframework.stereotype.Service;
 
 @Service
-public class MoneyControlService {
+public class StockFilterService {
 
     public void getStocks(){
         final String url = "https://www.moneycontrol.com/mutual-funds/performance-tracker/returns/equity---etfindex.html";
