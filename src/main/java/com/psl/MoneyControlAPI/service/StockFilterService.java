@@ -14,7 +14,7 @@ import java.util.List;
 
 @Service
 public class StockFilterService {
-    public List<StockFilter> getStocks(String fundURL, String duration){
+    public List<StockFilter> getStocks(String fundURL, String[] duration){
         List<StockFilter> stocks = new ArrayList<>();
         List<String> title = new ArrayList<String>();
         final String url = "https://www.moneycontrol.com/mutual-funds/performance-tracker/returns/"+fundURL+".html";

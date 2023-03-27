@@ -21,7 +21,7 @@ public class StocksFilterController {
     }
 
     @GetMapping("/stocks/{url}/{duration}")
-    public List<StockFilter> getStocks(@PathVariable("url") String url, @PathVariable("duration") String duration){
+    public List<StockFilter> getStocks(@PathVariable("url") String url, @PathVariable("duration") String[] duration){
         return service.getStocks(url,duration);
     }
 }
