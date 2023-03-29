@@ -32,7 +32,7 @@ public class StockFilterService {
                     continue;
                 }
                 title.add(schemeName);
-
+                String fundName =  row.select("td:nth-of-type(3)").text();
                 String auM =  row.select("td:nth-of-type(5)").text();
                 auM = auM.equals("-")?"0":auM.replace(",", "");
 
@@ -57,7 +57,7 @@ public class StockFilterService {
                 double fiveYear =  StringFormatter.convertToDouble(col5Y);
                 double tenYear =  StringFormatter.convertToDouble(col10Y);
 
-                stocks.add(StockFilter.builder().schemeName(schemeName).marketValue(marketValue).oneWeek(oneWeek).oneMonth(oneMonth).threeMonth(threeMonth).sixMonth(sixMonth).oneYear(oneYear).twoYear(twoYear).threeYear(threeYear).fiveYear(fiveYear).tenYear(tenYear).build());
+                stocks.add(StockFilter.builder().schemeName(schemeName).fundName(fundName).marketValue(marketValue).oneWeek(oneWeek).oneMonth(oneMonth).threeMonth(threeMonth).sixMonth(sixMonth).oneYear(oneYear).twoYear(twoYear).threeYear(threeYear).fiveYear(fiveYear).tenYear(tenYear).build());
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,4 +65,6 @@ public class StockFilterService {
 
         return LimitRecords.getTopNRecords(SortingLogic.sortedList(stocks,duration),5);
     }
+
+
 }

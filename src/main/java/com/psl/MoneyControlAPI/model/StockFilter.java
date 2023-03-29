@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 public class StockFilter {
 
     private String schemeName;
+    private String fundName;
     private double marketValue;
     private double oneWeek;
     private double oneMonth;
