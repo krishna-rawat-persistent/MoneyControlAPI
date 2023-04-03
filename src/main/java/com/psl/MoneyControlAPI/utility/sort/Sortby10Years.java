@@ -7,8 +7,6 @@ import java.util.Comparator;
 public class Sortby10Years implements Comparator<StockFilter> {
     @Override
     public int compare(StockFilter o1, StockFilter o2) {
-        if (o1.getTenYear() < o2.getTenYear() || (o1.getTenYear() == 0)) return 1;
-        if (o1.getTenYear() > o2.getTenYear()) return -1;
-        return 0;
+        return ComparisonLogic.logic(o1.getTenYear(),o2.getTenYear());
     }
 }
