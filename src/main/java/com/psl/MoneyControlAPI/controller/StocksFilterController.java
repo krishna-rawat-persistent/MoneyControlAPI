@@ -34,7 +34,7 @@ public class StocksFilterController {
 
 	@GetMapping("/emailSend")
 	public String sendMail() {
-		senderService.sendEmail("This is subject", "This is body");
+		senderService.sendEmail();
 		return "Mail Sent successfully...";
 
 	}
